@@ -38,7 +38,7 @@ var questionsArray =[
 
     {
         question:"Question 4. 90 ÷ 10 ?                             ",
-        Answer:"B. 10",
+        Answer:"A. 9",
         options:
         [
             "A. 9",        
@@ -77,17 +77,22 @@ optionElement[i].innerHTML= questionsArray[e].options[i]
 
 }
  var questionCount = 0;
-
+ var score =0;
  function nextQuestion(){
+    validate(questionCount)
      questionCount++;
-     showQuestion(questionCount);
-     removeActive()
- } 
 
+     validate(questionCount)
+     showQuestion(questionCount);
+     removeActive() 
+     resultButton();
+     //console.log(score)
+    } 
+    
  function putActive(e){
     removeActive()
    e.classList.add("active")
-   
+
  }
 
  function removeActive(){
@@ -96,3 +101,140 @@ optionElement[i].innerHTML= questionsArray[e].options[i]
       active[i].classList.remove("active")
      }
  }
+ function validate(e){
+    var active=document.getElementsByClassName("active")
+    if(active[0].innerHTML == questionsArray[e].Answer){
+        score +=10;
+    sessionStorage.getItem("userScore","score")    
+
+    }
+    
+ }
+   
+
+ function resultButton(){
+   // removeActive()
+
+    if(questionCount === 2){
+ var nextBtn =document.getElementById("nextBtn")
+ var result = document.createElement("button")
+ var btnText=document.createTextNode("Result")
+ result.appendChild(btnText)
+nextBtn.innerHTML= result.innerHTML
+
+nextBtn.setAttribute("onclick","resultQuiz()")
+    }
+   
+}
+
+
+
+
+     
+      function resultQuiz(){
+    
+    
+     if(score>=10){
+
+       window.location.href = "resultquiz.html"
+     
+       // document.write("Your score is "+ score +"out of 50")
+     
+
+
+
+//        var pera1 = document.getElementById("pera1")
+        
+//        pera1.innerHTML="Congratulation you pass the quiz"
+// console.log(pera1)
+// pera1.innerHTML=("Your score is "+ score + " out of 50")
+     
+//        document.write("Your score is "+ score +"out of 50")
+      
+     }
+     
+        else
+        {
+            
+        //   var failquiz =document.getElementById("failquiz")
+          
+             window.location.href = "fail.html"
+        //   failquiz.innerHTML="YOU ARE FAIL PLEASE TRY AGAIN "  
+        //     failquiz.innerHTML=("Your score is "+ score +"out of 50")
+         } 
+      }
+      
+    
+    //    var pera1 = document.getElementById("pera1")
+    //   pera1.innerHTML=("Your score is "+ score + " out of 50")
+     
+if(score >= 10){
+    
+    var pera1 = document.getElementById("pera1")
+    pera1.innerHTML=("Your score is "+ score + " out of 50")
+
+   // window.location.href = "resultquiz.html"
+
+}
+else{
+    
+     var failquiz =document.getElementById("failquiz")
+    // failquiz.innerHTML="YOU ARE FAIL PLEASE TRY AGAIN "
+    failquiz.innerHTML=("Your score is "+ score + " out of 50")
+    console.log(failquiz)
+  //  window.location.href = "fail.html"
+        
+}
+
+sessionStorage.setItem("userscore","score")
+console.log(score)
+function setScore(){
+    sessionStorage.getItem("userscore","score")
+console.log(userScore)
+}
+setScore()
+    function tryAgain(){
+        window.location.href = "index.html"
+      
+    }
+
+
+//         input required
+//  var name = document.getElementsByClassName("name") 
+//  //var button =document.getElementById("btn")
+    
+//  if(name.value == "" || name.value == " "){
+
+//      alert("please Enter your name")
+//      console.log(name.value)
+//  }
+//   else{
+//     alert("google")
+// //     startQuiz();
+//   }
+
+function enterName(){
+
+var input = document.getElementById("userName");
+    if(input.value == "" || input.value == " "){
+        alert("User Name Required!");
+    }
+    else {
+      //  sessionStorage.setItem("name",input.value);
+        startQuiz();
+    }
+
+}
+
+
+
+
+
+
+
+//start page
+ function startQuiz(){
+    window.location.href = "quiz.html"
+}
+
+

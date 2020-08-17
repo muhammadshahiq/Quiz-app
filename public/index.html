@@ -1,54 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QUIZ APP</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-</head>
-<body onload="showQuestion(0)" class="body1">
-    <div class="card">
-        <div class="card-header">
-          MATHEMATICS QUIZ
-        </div>
-        <div class="card-body">
-          <h5 class="card-title" id="questionElement">Question 1. Find the sum of 111 + 222 + 333 ? </h5>
-          <p class="card-text"><div class="input-group">
-            <div class="input-group-prepend">
-              <!-- <div class="input-group-text">
-                <input type="radio" aria-label="Radio button for following text input" >
-              </div> -->
-            </div>
-            <p class="optionElement form-control" aria-label="Text input with radio button" onclick="putActive(this)" >option 1</p>
-          </div>
-          <div class="input-group" >
-            <div class="input-group-prepend">
-              <!-- <div class="input-group-text" >
-                <input  type="radio" aria-label="Radio button for following text input" >
-                  </div> -->
-            </div>
-            <p class="optionElement form-control" aria-label="Text input with radio button" onclick="putActive(this)">option 2</p>
-          </div>
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <!-- <div class="input-group-text">
-                <input type="radio" aria-label="Radio button for following text input">
-              </div> -->
-            </div>
-            <p class="optionElement form-control" aria-label="Text input with radio button" onclick="putActive(this)">option 3</p>
-          </div>
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <!-- <div class="input-group-text">
-                <input type="radio" aria-label="Radio button for following text input">
-              </div> -->
-            </div>
-            <p class="optionElement form-control" aria-label="Text input with radio button" onclick="putActive(this)">option 4</p>
-          </div></p>
-          <a href="#" class="btn btn-primary btn1" onclick="nextQuestion()">Next</a>
-        </div>
-      </div>    
+
+
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Quiz App</title>
+          <link rel="stylesheet" href="style.css">
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+      
+      
+      </head>
+      <body class="body2">
+      
+          <div class="divbdy" align="center">
+              <h1 class="hcolor">Simple Math Quiz</h1>
+              <h6 class="pcolor">This Test contain 5 questions and each questions is 10 marks</h6>
+          <input id="userName" class="name"  type="text" placeholder="Enter Your Name" size="25" > 
+       <br>
+          <button id="btn" class="btn2 btn btn-primary" onclick="enterName()">Start Quiz</button>
+      </div>
+      
+      
 
 
 

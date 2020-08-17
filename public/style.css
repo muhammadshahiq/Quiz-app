@@ -2,7 +2,9 @@
     margin-top: 10% !important;
 }
 .card{
+    
     align-items: center;
+    background-image: url(https://www.beautycolorcode.com/312883-1366x768.png);
 }
 .input-group{
     margin: 5px 5px 5px 5px !important;
@@ -22,3 +24,70 @@
     background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: #fff;}
+
+
+    /*start quiz */
+.divbdy{
+    margin-top: 25%;
+}
+
+     .name{
+        align-items: center;
+        color: black;
+        /* margin-left: 40%;
+        margin-top: 25%; */
+        padding-left: 5px;
+        width: 300px;
+        text-align: center;
+    }
+    .btn2{
+        align-items: center !important;
+        /* margin-left: 44%;*/  
+        margin-top: 10px; 
+        background-color:#0f0c29 !important; 
+    }
+    .body2{
+        background-image: url(https://cdn.hipwallpaper.com/i/57/51/3QYe8w.jpg);
+    }
+    .hcolor{
+        color:rgb(128, 128, 128)
+    }
+    .pcolor{
+        font-weight: bold;
+        color: rgba(187, 187, 187, 0.575);
+    }
+
+
+    /* result.html  result of quiz*/
+    .back{
+        align-items: center !important;
+        background-color:#808080;
+        /* background-image: url(https://www.xmple.com/wallpaper/linear-highlight-gradient-blue-1920x1080-c2-0f0c29-22187e-l-50-a-105-f-21.svg); */
+    }
+    #pass{
+        align-items: center;
+        margin-top: 25%;
+    }
+    .cen{
+        align-items: center;
+    }
+    .bold{
+        font-style: bold;
+        font-size: 45px;
+
+    }
+    #failquiz{
+        font-style: bold;
+        font-size: 50px;
+
+    }
+    .p1{
+        font-style: bold;
+        font-size: 45px;
+ 
+    }
+    .hide{
+    
+          align-items: center;
+        margin-top: 25%;
+    }
